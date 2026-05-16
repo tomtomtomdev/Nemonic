@@ -24,6 +24,7 @@ final class CaptureCoordinator {
 
     private(set) var status: Status = .idle
     private(set) var events: [Event] = []
+    let watchlist: Watchlist
 
     private let desktop: URL
     private let registry: ScreenerRegistry
@@ -35,16 +36,19 @@ final class CaptureCoordinator {
 
     init(desktop: URL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop"),
          registry: ScreenerRegistry,
+         watchlist: Watchlist,
          ocr: any OCRService = VisionOCRService(),
          mapper: RowMapper = RowMapper(),
          sink: FileSink = FileSink()) {
         self.desktop = desktop
         self.registry = registry
+        self.watchlist = watchlist
         self.classifier = ScreenerClassifier(registry: registry)
         self.mapper = mapper
         self.ocr = ocr
         self.sink = sink
         self.watcher = ScreenshotWatcher(directory: desktop)
+        watchlist.rebuild()
     }
 
     func start() {
@@ -94,6 +98,11 @@ final class CaptureCoordinator {
 
             let written = try sink.write(rows: mapped, for: schema, outputDirectory: desktop)
             log("Wrote \(written.lastPathComponent) (\(mapped.count) rows)", kind: .success)
+
+            watchlist.rebuild()
+            if !watchlist.signals.isEmpty {
+                log("Watchlist: \(watchlist.signals.count) signal(s)", kind: .success)
+            }
 
             try sink.trash(url)
             log("Trashed \(url.lastPathComponent)", kind: .success)

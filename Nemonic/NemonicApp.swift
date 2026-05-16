@@ -35,7 +35,11 @@ struct NemonicApp: App {
     private func bootstrap() {
         do {
             let registry = try ScreenerRegistry.load()
-            coordinator = CaptureCoordinator(registry: registry)
+            let desktop = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop")
+            let sizer = PositionSizer(accountSize: 43_000_000, riskPerTrade: 0.01, maxPositionPct: 0.15)
+            let engine = SignalEngine(sizer: sizer)
+            let watchlist = Watchlist(desktop: desktop, registry: registry, engine: engine)
+            coordinator = CaptureCoordinator(desktop: desktop, registry: registry, watchlist: watchlist)
         } catch {
             loadError = error.localizedDescription
         }

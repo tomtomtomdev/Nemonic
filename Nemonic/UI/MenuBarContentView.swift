@@ -17,6 +17,10 @@ struct MenuBarContentView: View {
 
             Divider()
 
+            SignalsSection(watchlist: coordinator.watchlist)
+
+            Divider()
+
             if coordinator.events.isEmpty {
                 Text("No events yet. Take a screenshot of a screener.")
                     .font(.callout)
@@ -78,6 +82,99 @@ struct MenuBarContentView: View {
     private func toggle() {
         if isRunning { coordinator.stop() }
         else { coordinator.start() }
+    }
+}
+
+private struct SignalsSection: View {
+    @Bindable var watchlist: Watchlist
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Text("Signals").font(.headline)
+                Spacer()
+                if !watchlist.hasConfluence {
+                    Text("awaiting #1 confluence")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                } else {
+                    Text("\(watchlist.signals.count) hit\(watchlist.signals.count == 1 ? "" : "s")")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            if watchlist.signals.isEmpty {
+                Text(watchlist.hasConfluence
+                     ? "No survivors yet. Capture #2-#8 screeners."
+                     : "Capture the Confluence Universe Filter first.")
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
+                    .padding(.vertical, 2)
+            } else {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 2) {
+                        ForEach(watchlist.signals) { signal in
+                            SignalRow(signal: signal)
+                        }
+                    }
+                }
+                .frame(maxHeight: 180)
+            }
+        }
+    }
+}
+
+private struct SignalRow: View {
+    let signal: ScreenerSignal
+
+    var body: some View {
+        HStack(spacing: 6) {
+            Text(signal.ticker)
+                .font(.system(.callout, design: .monospaced).bold())
+                .frame(width: 52, alignment: .leading)
+            VStack(alignment: .leading, spacing: 0) {
+                Text(shortScreener)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                HStack(spacing: 4) {
+                    Text("buy \(idr(signal.entry))")
+                    Text("•").foregroundStyle(.tertiary)
+                    Text("stop \(idr(signal.stop))").foregroundStyle(.secondary)
+                }
+                .font(.caption2)
+            }
+            Spacer()
+            VStack(alignment: .trailing, spacing: 0) {
+                Text(String(format: "%.1f%%", signal.plan.allocationPct * 100))
+                    .font(.callout.monospacedDigit().bold())
+                Text("\(signal.plan.shares.formatted()) sh")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(.vertical, 2)
+    }
+
+    private var shortScreener: String {
+        switch signal.screenerId {
+        case "classical-trend-follower": return "Murphy trend"
+        case "quiet-bandar-accumulation": return "Bandarmology"
+        case "bb-squeeze-breakout": return "BB squeeze"
+        case "with-trend-pullback": return "Grimes pullback"
+        case "livermore-pivotal-point": return "Livermore"
+        case "coulling-stopping-volume": return "VPA stopping"
+        case "wyckoff-phase-c-spring": return "Wyckoff spring"
+        default: return signal.screenerId
+        }
+    }
+
+    private func idr(_ v: Int) -> String {
+        // IDR uses dot thousands separators in Indonesian convention.
+        let f = NumberFormatter()
+        f.numberStyle = .decimal
+        f.groupingSeparator = "."
+        return f.string(from: NSNumber(value: v)) ?? "\(v)"
     }
 }
 
