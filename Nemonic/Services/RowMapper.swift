@@ -13,18 +13,24 @@ nonisolated struct RowMapper: Sendable {
         let keys = schema.orderedKeys
         guard !keys.isEmpty else { return [] }
 
+        // Tolerate up to 2 missing trailing columns; reject rows narrower than that.
+        let minCells = max(2, keys.count - 2)
+
         var output: [ScreenerRow] = []
         for cells in tableRows {
+            if cells.count < minCells { continue }
             if cells.allSatisfy({ $0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }) {
                 continue
             }
+            let code = cells[0].trimmingCharacters(in: .whitespacesAndNewlines)
+            guard Self.isIDXTicker(code) else { continue }
+
             var pairs: [ScreenerRow.Pair] = []
             for (i, key) in keys.enumerated() {
                 let raw = i < cells.count ? cells[i] : ""
                 let value: JSONValue
                 if i == 0 {
-                    // First column is always the ticker code — preserve as string.
-                    value = .string(raw.trimmingCharacters(in: .whitespacesAndNewlines))
+                    value = .string(code)
                 } else {
                     value = NumericValueParser.parse(raw)
                 }
@@ -33,5 +39,14 @@ nonisolated struct RowMapper: Sendable {
             output.append(ScreenerRow(pairs: pairs))
         }
         return output
+    }
+
+    /// IDX tickers are 4 uppercase ASCII letters (e.g. GOTO, MIDI, ACES, GJTL).
+    private static func isIDXTicker(_ s: String) -> Bool {
+        guard s.count == 4 else { return false }
+        for ch in s.unicodeScalars {
+            if !(ch.value >= 0x41 && ch.value <= 0x5A) { return false }
+        }
+        return true
     }
 }
