@@ -22,8 +22,10 @@ nonisolated struct RowMapper: Sendable {
             if cells.allSatisfy({ $0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }) {
                 continue
             }
-            let code = cells[0].trimmingCharacters(in: .whitespacesAndNewlines)
-            guard Self.isIDXTicker(code) else { continue }
+            // Stockbit prefixes ticker rows with a small logo glyph that OCR often reads as a
+            // stray single character ("A BANK", "T GOTO"). Extract the 4-letter token instead
+            // of trusting the raw cell, so we end up with one canonical ticker per row.
+            guard let code = Self.extractTicker(from: cells[0]) else { continue }
 
             var pairs: [ScreenerRow.Pair] = []
             for (i, key) in keys.enumerated() {
@@ -48,5 +50,15 @@ nonisolated struct RowMapper: Sendable {
             if !(ch.value >= 0x41 && ch.value <= 0x5A) { return false }
         }
         return true
+    }
+
+    /// Find the first 4-letter uppercase ASCII token in a cell. Robust to the Stockbit logo
+    /// glyph that OCR reads as a leading single character.
+    private static func extractTicker(from cell: String) -> String? {
+        for token in cell.split(whereSeparator: { $0.isWhitespace }) {
+            let s = String(token)
+            if isIDXTicker(s) { return s }
+        }
+        return nil
     }
 }

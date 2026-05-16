@@ -45,6 +45,20 @@ struct RowMapperTests {
         #expect(mapped.first?.pairs.first?.value == .string("GJTL"))
     }
 
+    @Test func extractsTickerWhenStockbitLogoLeadsCell() {
+        // Stockbit prefixes ticker rows with a colored logo glyph; OCR reads it as a stray
+        // single character ("A BANK", "T GOTO"). Pick out the embedded 4-letter ticker so we
+        // still emit exactly one row per stock, overwriting the icon noise.
+        let rows = [
+            ["A BANK", "15.89", "68.25B", "67.77B", "60.25%"],
+            ["T GOTO", "10", "20", "30", "40%"],
+        ]
+        let mapped = RowMapper().map(tableRows: rows, using: schema)
+        #expect(mapped.count == 2)
+        #expect(mapped[0].pairs.first?.value == .string("BANK"))
+        #expect(mapped[1].pairs.first?.value == .string("GOTO"))
+    }
+
     // MARK: - Minimum cell count (tolerate up to 2 missing trailing columns)
 
     @Test func dropsRowsWithTooFewCells() {
