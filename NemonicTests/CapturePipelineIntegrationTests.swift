@@ -49,6 +49,49 @@ struct CapturePipelineIntegrationTests {
                 "exactly one canonical JSON per screener; got \(allJSON)")
     }
 
+    @Test func bbSqueezePanelScreenshotProducesBBSqueezeJSON() async throws {
+        let url = try fixture(named: "bb-squeeze-breakout-panel", ext: "png")
+        let registry = try ScreenerRegistry.load(bundle: .main)
+
+        let ocr = VisionOCRService()
+        let result = try await ocr.recognize(imageAt: url)
+
+        if Self.printDebug { print("--- pageText ---\n\(result.pageText)\n--- end ---") }
+
+        // 1. Classifier picks Bulkowski BB Squeeze Breakout (title in panel header).
+        let classifier = ScreenerClassifier(registry: registry)
+        let schema = try #require(classifier.classify(pageText: result.pageText))
+        #expect(schema.id == "bb-squeeze-breakout",
+                "expected bb-squeeze-breakout; got \(schema.id). pageText=\(result.pageText)")
+
+        // 2. RowMapper recovers all four tickers from icon-prefixed cells.
+        let table = try #require(result.tables.first)
+        let mapped = RowMapper().map(tableRows: Array(table.rows.dropFirst()), using: schema)
+        let tickers = Set(mapped.compactMap { row -> String? in
+            if case .string(let s) = row.pairs.first?.value { return s }
+            return nil
+        })
+        #expect(tickers == ["KJEN", "KOPI", "NEST", "BSWD"],
+                "expected KJEN/KOPI/NEST/BSWD; got \(tickers)")
+
+        // 3. Mapped rows align with the 7-column schema so each non-empty value lands on the
+        //    correct key — verified spot-check that BSWD's 1-day-volume-change reads "100.00%"
+        //    (catches the prior bug where %-strings were mis-mapped onto bb-lower-20).
+        let bswd = try #require(mapped.first { row in
+            if case .string("BSWD") = row.pairs.first?.value { return true }
+            return false
+        })
+        let bswdChange = bswd.pairs.first { $0.key == "1-day-volume-change" }?.value
+        #expect(bswdChange == .string("100.00%"),
+                "BSWD 1-day-volume-change misaligned; got \(String(describing: bswdChange))")
+
+        // 4. FileSink writes <screener-id>.json deterministically.
+        let tmp = try makeTempDir()
+        let sink = FileSink()
+        let written = try sink.write(rows: mapped, for: schema, outputDirectory: tmp)
+        #expect(written.lastPathComponent == "bb-squeeze-breakout.json")
+    }
+
     private func makeTempDir() throws -> URL {
         let url = FileManager.default.temporaryDirectory.appendingPathComponent("nemonic-itest-\(UUID().uuidString)")
         try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)

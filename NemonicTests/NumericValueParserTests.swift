@@ -24,8 +24,10 @@ struct NumericValueParserTests {
     }
 
     @Test func decimalWithoutSuffixStaysString() {
-        // sample-bb-squeeze-breakout.json stores 0.072 as "0.072"
+        // Stockbit prices arrive with `.00` (e.g. "168.00"); the decimal point keeps them
+        // out of the integer branch so they round-trip verbatim.
         #expect(NumericValueParser.parse("0.072") == .string("0.072"))
+        #expect(NumericValueParser.parse("168.00") == .string("168.00"))
     }
 
     @Test func emptyAndDashCellsBecomeEmptyString() {

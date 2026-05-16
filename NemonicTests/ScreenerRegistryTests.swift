@@ -20,10 +20,16 @@ struct ScreenerRegistryTests {
         #expect(confluence.orderedKeys.firstIndex(of: "code") == 0)
     }
 
-    @Test func bbSqueezeSchemaHasSqueezeRatioKey() throws {
+    @Test func bbSqueezeSchemaMatchesStockbitPanelColumns() throws {
+        // Sample mirrors the 7 columns Stockbit actually shows for the Bulkowski BB Squeeze
+        // Breakout panel: Symbol | Price | BB Upper (20) | Volume | Volume MA 20 |
+        // 1 Day Volume Change | Price MA 50. The squeeze ratio + BB Lower are part of the
+        // filter logic but not displayed, so they aren't in the schema.
         let registry = try ScreenerRegistry.load(bundle: .main)
         let bb = try #require(registry.schema(forID: "bb-squeeze-breakout"))
-        #expect(bb.orderedKeys.contains("bb-squeeze-ratio"))
-        #expect(bb.orderedKeys.contains("bb-upper-20"))
+        #expect(bb.orderedKeys == [
+            "code", "price", "bb-upper-20", "volume", "volume-ma-20",
+            "1-day-volume-change", "price-ma-50"
+        ])
     }
 }
