@@ -135,6 +135,49 @@ struct CapturePipelineIntegrationTests {
         #expect(written.lastPathComponent == "with-trend-pullback.json")
     }
 
+    @Test func livermorePanelScreenshotProducesLivermoreJSON() async throws {
+        let url = try fixture(named: "livermore-pivotal-point-panel", ext: "png")
+        let registry = try ScreenerRegistry.load(bundle: .main)
+
+        let ocr = VisionOCRService()
+        let result = try await ocr.recognize(imageAt: url)
+
+        if Self.printDebug { print("--- pageText ---\n\(result.pageText)\n--- end ---") }
+
+        // 1. Classifier picks Livermore Pivotal Point from the panel header.
+        let classifier = ScreenerClassifier(registry: registry)
+        let schema = try #require(classifier.classify(pageText: result.pageText))
+        #expect(schema.id == "livermore-pivotal-point",
+                "expected livermore-pivotal-point; got \(schema.id). pageText=\(result.pageText)")
+
+        // 2. RowMapper recovers the single HYGN ticker from the icon-prefixed cell.
+        let table = try #require(result.tables.first)
+        let mapped = RowMapper().map(tableRows: Array(table.rows.dropFirst()), using: schema)
+        let tickers = Set(mapped.compactMap { row -> String? in
+            if case .string(let s) = row.pairs.first?.value { return s }
+            return nil
+        })
+        #expect(tickers == ["HYGN"], "expected HYGN; got \(tickers)")
+
+        // 3. Schema column order matches the Stockbit panel, so each value lands on the
+        //    correct key. Spot-check HYGN: Price MA 200 reads "157.00" (would have shown up
+        //    under `price-ma-20` under the prior mis-aligned schema where MA 20/50/200
+        //    were ordered by period rather than panel position).
+        let hygn = try #require(mapped.first { row in
+            if case .string("HYGN") = row.pairs.first?.value { return true }
+            return false
+        })
+        let ma200 = hygn.pairs.first { $0.key == "price-ma-200" }?.value
+        #expect(ma200 == .string("157.00"),
+                "HYGN price-ma-200 misaligned; got \(String(describing: ma200))")
+
+        // 4. FileSink writes <screener-id>.json deterministically.
+        let tmp = try makeTempDir()
+        let sink = FileSink()
+        let written = try sink.write(rows: mapped, for: schema, outputDirectory: tmp)
+        #expect(written.lastPathComponent == "livermore-pivotal-point.json")
+    }
+
     private func makeTempDir() throws -> URL {
         let url = FileManager.default.temporaryDirectory.appendingPathComponent("nemonic-itest-\(UUID().uuidString)")
         try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)

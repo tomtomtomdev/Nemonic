@@ -1,0 +1,67 @@
+[
+    {
+        "code": "GJTL",
+        "value-ma-20": "8,973,753,750.00",
+        "price-ma-50": "1,127.00",
+        "price-ma-200": "1,069.00",
+        "price": "1,230.00",
+        "price-ma-20": "1,203.00",
+        "1-month-net-foreign-flow": "26.79B",
+        "bandar-value-ma-10": "(424.38B)",
+        "bandar-value-ma-20": "(425.07B)",
+        "net-insider-buy-sell-6m-%": "0.70%",
+        "rsi-14": "60.25%"
+    },
+    {
+        "code": "MORA",
+        "value-ma-20": "12,799,799,125.00",
+        "price-ma-50": "5,406.00",
+        "price-ma-200": "4,908.00",
+        "price": "6,875.00",
+        "price-ma-20": "5,793.00",
+        "1-month-net-foreign-flow": "29.95B",
+        "bandar-value-ma-10": "40.24B",
+        "bandar-value-ma-20": "37.76B",
+        "net-insider-buy-sell-6m-%": "28.44%",
+        "rsi-14": "57.26%"
+    },
+    {
+        "code": "ENZO",
+        "value-ma-20": "16,636,237,170.00",
+        "price-ma-50": "74.00",
+        "price-ma-200": "56.00",
+        "price": "93.00",
+        "price-ma-20": "82.00",
+        "1-month-net-foreign-flow": "250.66M",
+        "bandar-value-ma-10": "(29.03B)",
+        "bandar-value-ma-20": "(29.65B)",
+        "net-insider-buy-sell-6m-%": "20.81%",
+        "rsi-14": "58.71%"
+    },
+    {
+        "code": "FORE",
+        "value-ma-20": "32,773,942,225.00",
+        "price-ma-50": "735.00",
+        "price-ma-200": "587.00",
+        "price": "980.00",
+        "price-ma-20": "943.00",
+        "1-month-net-foreign-flow": "27.79B",
+        "bandar-value-ma-10": "21.31B",
+        "bandar-value-ma-20": "12.93B",
+        "net-insider-buy-sell-6m-%": "5.03%",
+        "rsi-14": "60.53%"
+    },
+    {
+        "code": "MAPI",
+        "value-ma-20": "46,819,617,075.00",
+        "price-ma-50": "1,254.00",
+        "price-ma-200": "1,231.00",
+        "price": "1,475.00",
+        "price-ma-20": "1,322.00",
+        "1-month-net-foreign-flow": "98.16B",
+        "bandar-value-ma-10": "(98.97B)",
+        "bandar-value-ma-20": "(100.35B)",
+        "net-insider-buy-sell-6m-%": "51.00%",
+        "rsi-14": "63.99%"
+    }
+]

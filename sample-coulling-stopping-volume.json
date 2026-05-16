@@ -1,0 +1,110 @@
+[
+    {
+        "code": "VRNA",
+        "low-price": "77.00",
+        "price-ma-20": "81.00",
+        "price": "83.00",
+        "open-price": "77.00",
+        "volume": "2,401,000.00",
+        "volume-ma-20": "985,745.00",
+        "1-day-volume-change": "1,186.02%",
+        "foreign-flow-ma-20": "6.73B",
+        "frequency-spike": "0.010"
+    },
+    {
+        "code": "TMPO",
+        "low-price": "121.00",
+        "price-ma-20": "131.00",
+        "price": "123.00",
+        "open-price": "121.00",
+        "volume": "9,775,200.00",
+        "volume-ma-20": "3,259,660.00",
+        "1-day-volume-change": "363.28%",
+        "foreign-flow-ma-20": "4.69B",
+        "frequency-spike": "0.065"
+    },
+    {
+        "code": "FIRE",
+        "low-price": "130.00",
+        "price-ma-20": "144.00",
+        "price": "152.00",
+        "open-price": "132.00",
+        "volume": "317,196,600.00",
+        "volume-ma-20": "45,562,285.00",
+        "1-day-volume-change": "179.57%",
+        "foreign-flow-ma-20": "203.27B",
+        "frequency-spike": "0.002"
+    },
+    {
+        "code": "BNBR",
+        "low-price": "155.00",
+        "price-ma-20": "205.00",
+        "price": "175.00",
+        "open-price": "156.00",
+        "volume": "3,888,994,200.00",
+        "volume-ma-20": "1,777,990,310.00",
+        "1-day-volume-change": "323.98%",
+        "foreign-flow-ma-20": "2,962.15B",
+        "frequency-spike": "0.011"
+    },
+    {
+        "code": "UNSP",
+        "low-price": "300.00",
+        "price-ma-20": "382.00",
+        "price": "318.00",
+        "open-price": "300.00",
+        "volume": "6,642,600.00",
+        "volume-ma-20": "2,309,975.00",
+        "1-day-volume-change": "911.20%",
+        "foreign-flow-ma-20": "757.09B",
+        "frequency-spike": "3.260"
+    },
+    {
+        "code": "RSGK",
+        "low-price": "1,085.00",
+        "price-ma-20": "1,294.00",
+        "price": "1,190.00",
+        "open-price": "1,085.00",
+        "volume": "78,800.00",
+        "volume-ma-20": "29,310.00",
+        "1-day-volume-change": "994.44%",
+        "foreign-flow-ma-20": "7.29B",
+        "frequency-spike": "1.898"
+    },
+    {
+        "code": "AMRT",
+        "low-price": "1,305.00",
+        "price-ma-20": "1,448.00",
+        "price": "1,415.00",
+        "open-price": "1,400.00",
+        "volume": "117,982,500.00",
+        "volume-ma-20": "42,403,645.00",
+        "1-day-volume-change": "158.06%",
+        "foreign-flow-ma-20": "1,968.07B",
+        "frequency-spike": "0.324"
+    },
+    {
+        "code": "BAYU",
+        "low-price": "1,320.00",
+        "price-ma-20": "1,352.00",
+        "price": "1,340.00",
+        "open-price": "1,325.00",
+        "volume": "420,600.00",
+        "volume-ma-20": "184,430.00",
+        "1-day-volume-change": "11.86%",
+        "foreign-flow-ma-20": "20.43B",
+        "frequency-spike": "0.066"
+    },
+    {
+        "code": "AMMN",
+        "low-price": "3,570.00",
+        "price-ma-20": "5,018.00",
+        "price": "3,700.00",
+        "open-price": "3,670.00",
+        "volume": "110,114,000.00",
+        "volume-ma-20": "31,581,470.00",
+        "1-day-volume-change": "238.83%",
+        "foreign-flow-ma-20": "7,520.59B",
+        "frequency-spike": "0.068"
+    }
+]

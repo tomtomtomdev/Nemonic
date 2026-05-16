@@ -1,0 +1,16 @@
+[
+    {
+        "code": "HYGN",
+        "price": "160.00",
+        "bb-upper-20": "158.24",
+        "price-ma-200": "157.00",
+        "price-ma-20": "147.00",
+        "price-ma-50": "145.00",
+        "volume": "4,880,400.00",
+        "volume-ma-50": "4,108,928.00",
+        "value": "781,595,700.00",
+        "value-ma-50": "651,320,942.00",
+        "1-day-volume-change": "56.50%",
+        "net-foreign-buy-sell": "37.53M"
+    }
+]
