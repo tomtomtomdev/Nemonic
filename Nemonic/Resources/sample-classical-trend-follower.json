@@ -1,0 +1,57 @@
+[
+    {
+        "code": "BBCA",
+        "price": 9875,
+        "price-ma-50": 9540,
+        "price-ma-200": 9120,
+        "macd-12-26": 47.82,
+        "rsi-14": "58.42%",
+        "stochastic-14-1-3": "67.94%",
+        "volume-ma-20": 42183600,
+        "volume-ma-50": 38291400
+    },
+    {
+        "code": "BMRI",
+        "price": 5825,
+        "price-ma-50": 5640,
+        "price-ma-200": 5410,
+        "macd-12-26": 28.41,
+        "rsi-14": "61.83%",
+        "stochastic-14-1-3": "72.18%",
+        "volume-ma-20": 78462100,
+        "volume-ma-50": 71284500
+    },
+    {
+        "code": "ICBP",
+        "price": 11475,
+        "price-ma-50": 11180,
+        "price-ma-200": 10720,
+        "macd-12-26": 62.18,
+        "rsi-14": "63.27%",
+        "stochastic-14-1-3": "74.62%",
+        "volume-ma-20": 4827600,
+        "volume-ma-50": 4218300
+    },
+    {
+        "code": "INDF",
+        "price": 7250,
+        "price-ma-50": 7080,
+        "price-ma-200": 6810,
+        "macd-12-26": 34.71,
+        "rsi-14": "56.94%",
+        "stochastic-14-1-3": "61.83%",
+        "volume-ma-20": 8472100,
+        "volume-ma-50": 7281400
+    },
+    {
+        "code": "UNVR",
+        "price": 2470,
+        "price-ma-50": 2390,
+        "price-ma-200": 2280,
+        "macd-12-26": 12.18,
+        "rsi-14": "54.71%",
+        "stochastic-14-1-3": "58.94%",
+        "volume-ma-20": 38271500,
+        "volume-ma-50": 34281900
+    }
+]

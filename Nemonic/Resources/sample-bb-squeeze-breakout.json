@@ -1,0 +1,57 @@
+[
+    {
+        "code": "GOTO",
+        "bb-squeeze-ratio": "0.072",
+        "price": 68,
+        "bb-upper-20": 65,
+        "bb-lower-20": 61,
+        "volume": 4892364100,
+        "volume-ma-20": 1847293000,
+        "1-day-volume-change": "164.82%",
+        "price-ma-50": 63
+    },
+    {
+        "code": "MIDI",
+        "bb-squeeze-ratio": "0.061",
+        "price": 478,
+        "bb-upper-20": 462,
+        "bb-lower-20": 434,
+        "volume": 184629300,
+        "volume-ma-20": 71284500,
+        "1-day-volume-change": "82.41%",
+        "price-ma-50": 451
+    },
+    {
+        "code": "ACES",
+        "bb-squeeze-ratio": "0.084",
+        "price": 825,
+        "bb-upper-20": 815,
+        "bb-lower-20": 752,
+        "volume": 92847100,
+        "volume-ma-20": 38291400,
+        "1-day-volume-change": "112.36%",
+        "price-ma-50": 798
+    },
+    {
+        "code": "AMRT",
+        "bb-squeeze-ratio": "0.058",
+        "price": 2920,
+        "bb-upper-20": 2885,
+        "bb-lower-20": 2718,
+        "volume": 47291800,
+        "volume-ma-20": 18472600,
+        "1-day-volume-change": "94.17%",
+        "price-ma-50": 2810
+    },
+    {
+        "code": "INKP",
+        "bb-squeeze-ratio": "0.091",
+        "price": 8675,
+        "bb-upper-20": 8550,
+        "bb-lower-20": 7770,
+        "volume": 18472900,
+        "volume-ma-20": 7218400,
+        "1-day-volume-change": "73.28%",
+        "price-ma-50": 8240
+    }
+]

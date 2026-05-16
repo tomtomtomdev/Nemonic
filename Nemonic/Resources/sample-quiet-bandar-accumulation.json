@@ -1,0 +1,67 @@
+[
+    {
+        "code": "ARTO",
+        "bandar-accum-dist": 1247,
+        "bandar-value": "12.45B",
+        "bandar-value-ma-10": "10.82B",
+        "bandar-value-ma-20": "8.91B",
+        "net-foreign-buy-streak": 5,
+        "1-month-net-foreign-flow": "84.30B",
+        "frequency": 18432,
+        "frequency-analyzer-ma-50": 24180,
+        "value": "45.21B",
+        "value-ma-20": "38.74B"
+    },
+    {
+        "code": "BUKA",
+        "bandar-accum-dist": 892,
+        "bandar-value": "6.73B",
+        "bandar-value-ma-10": "5.94B",
+        "bandar-value-ma-20": "4.82B",
+        "net-foreign-buy-streak": 3,
+        "1-month-net-foreign-flow": "31.18B",
+        "frequency": 12087,
+        "frequency-analyzer-ma-50": 15640,
+        "value": "22.36B",
+        "value-ma-20": "19.05B"
+    },
+    {
+        "code": "EMTK",
+        "bandar-accum-dist": 2103,
+        "bandar-value": "18.92B",
+        "bandar-value-ma-10": "16.41B",
+        "bandar-value-ma-20": "13.27B",
+        "net-foreign-buy-streak": 7,
+        "1-month-net-foreign-flow": "152.74B",
+        "frequency": 9821,
+        "frequency-analyzer-ma-50": 13452,
+        "value": "61.83B",
+        "value-ma-20": "52.16B"
+    },
+    {
+        "code": "BRPT",
+        "bandar-accum-dist": 415,
+        "bandar-value": "9.18B",
+        "bandar-value-ma-10": "7.62B",
+        "bandar-value-ma-20": "6.04B",
+        "net-foreign-buy-streak": 4,
+        "1-month-net-foreign-flow": "47.91B",
+        "frequency": 21540,
+        "frequency-analyzer-ma-50": 27893,
+        "value": "33.74B",
+        "value-ma-20": "28.49B"
+    },
+    {
+        "code": "MEDC",
+        "bandar-accum-dist": 1672,
+        "bandar-value": "14.27B",
+        "bandar-value-ma-10": "12.93B",
+        "bandar-value-ma-20": "10.18B",
+        "net-foreign-buy-streak": 6,
+        "1-month-net-foreign-flow": "98.46B",
+        "frequency": 16238,
+        "frequency-analyzer-ma-50": 22104,
+        "value": "52.89B",
+        "value-ma-20": "44.62B"
+    }
+]
