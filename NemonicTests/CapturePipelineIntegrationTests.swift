@@ -92,6 +92,49 @@ struct CapturePipelineIntegrationTests {
         #expect(written.lastPathComponent == "bb-squeeze-breakout.json")
     }
 
+    @Test func withTrendPullbackPanelScreenshotProducesWithTrendPullbackJSON() async throws {
+        let url = try fixture(named: "with-trend-pullback-panel", ext: "png")
+        let registry = try ScreenerRegistry.load(bundle: .main)
+
+        let ocr = VisionOCRService()
+        let result = try await ocr.recognize(imageAt: url)
+
+        if Self.printDebug { print("--- pageText ---\n\(result.pageText)\n--- end ---") }
+
+        // 1. Classifier picks With-Trend Pullback from the panel header.
+        let classifier = ScreenerClassifier(registry: registry)
+        let schema = try #require(classifier.classify(pageText: result.pageText))
+        #expect(schema.id == "with-trend-pullback",
+                "expected with-trend-pullback; got \(schema.id). pageText=\(result.pageText)")
+
+        // 2. RowMapper recovers all three tickers from icon-prefixed cells.
+        let table = try #require(result.tables.first)
+        let mapped = RowMapper().map(tableRows: Array(table.rows.dropFirst()), using: schema)
+        let tickers = Set(mapped.compactMap { row -> String? in
+            if case .string(let s) = row.pairs.first?.value { return s }
+            return nil
+        })
+        #expect(tickers == ["SLIS", "AIMS", "ASGR"],
+                "expected SLIS/AIMS/ASGR; got \(tickers)")
+
+        // 3. Schema column order matches the Stockbit panel, so each value lands on the
+        //    correct key. Spot-check SLIS: Price MA 200 reads "84.00" (would have shown up
+        //    under `price-ma-10` under the prior mis-aligned schema).
+        let slis = try #require(mapped.first { row in
+            if case .string("SLIS") = row.pairs.first?.value { return true }
+            return false
+        })
+        let slisMA200 = slis.pairs.first { $0.key == "price-ma-200" }?.value
+        #expect(slisMA200 == .string("84.00"),
+                "SLIS price-ma-200 misaligned; got \(String(describing: slisMA200))")
+
+        // 4. FileSink writes <screener-id>.json deterministically.
+        let tmp = try makeTempDir()
+        let sink = FileSink()
+        let written = try sink.write(rows: mapped, for: schema, outputDirectory: tmp)
+        #expect(written.lastPathComponent == "with-trend-pullback.json")
+    }
+
     private func makeTempDir() throws -> URL {
         let url = FileManager.default.temporaryDirectory.appendingPathComponent("nemonic-itest-\(UUID().uuidString)")
         try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)

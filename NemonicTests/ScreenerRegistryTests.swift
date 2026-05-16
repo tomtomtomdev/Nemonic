@@ -20,6 +20,20 @@ struct ScreenerRegistryTests {
         #expect(confluence.orderedKeys.firstIndex(of: "code") == 0)
     }
 
+    @Test func withTrendPullbackSchemaMatchesStockbitPanelColumns() throws {
+        // Stockbit's "With-Trend Pullback (Statistical Edge)" panel shows columns in the
+        // order: Symbol | Price MA 20 | Price MA 50 | Price MA 200 | Price | Price MA 10 |
+        // RSI (14) | Stochastic (14,1,3) | Volume | Volume MA 20. RowMapper maps by index,
+        // so the schema must mirror that ordering exactly — otherwise price/MA cells land
+        // on the wrong keys.
+        let registry = try ScreenerRegistry.load(bundle: .main)
+        let wtp = try #require(registry.schema(forID: "with-trend-pullback"))
+        #expect(wtp.orderedKeys == [
+            "code", "price-ma-20", "price-ma-50", "price-ma-200", "price", "price-ma-10",
+            "rsi-14", "stochastic-14-1-3", "volume", "volume-ma-20"
+        ])
+    }
+
     @Test func bbSqueezeSchemaMatchesStockbitPanelColumns() throws {
         // Sample mirrors the 7 columns Stockbit actually shows for the Bulkowski BB Squeeze
         // Breakout panel: Symbol | Price | BB Upper (20) | Volume | Volume MA 20 |
