@@ -1,0 +1,12 @@
+{
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Domain/ConfluenceContext.swift" : {
+    "abi-baseline-json" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic.abi.json",
+    "const-values" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-primary.swiftconstvalues",
+    "dependencies" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-primary.d",
+    "diagnostics" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-primary.dia",
+    "objc-header" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-Swift.h",
+    "swiftdoc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic.swiftdoc",
+    "swiftmodule" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic.swiftmodule",
+    "swiftsourceinfo" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic.swiftsourceinfo"
+  }
+}

@@ -1,0 +1,72 @@
+[
+    {
+        "code": "BBCA",
+        "price": 10250,
+        "bb-upper-20": 10080,
+        "price-ma-200": 9120,
+        "price-ma-20": 9810,
+        "price-ma-50": 9540,
+        "volume": 84281900,
+        "volume-ma-50": 48729100,
+        "value": "863.71B",
+        "value-ma-50": "478.92B",
+        "1-day-volume-change": "84.27%",
+        "net-foreign-buy-sell": "127.84B"
+    },
+    {
+        "code": "BMRI",
+        "price": 6125,
+        "bb-upper-20": 6020,
+        "price-ma-200": 5410,
+        "price-ma-20": 5790,
+        "price-ma-50": 5640,
+        "volume": 148291700,
+        "volume-ma-50": 78462100,
+        "value": "908.42B",
+        "value-ma-50": "456.18B",
+        "1-day-volume-change": "94.62%",
+        "net-foreign-buy-sell": "184.27B"
+    },
+    {
+        "code": "BBRI",
+        "price": 4980,
+        "bb-upper-20": 4895,
+        "price-ma-200": 4390,
+        "price-ma-20": 4720,
+        "price-ma-50": 4580,
+        "volume": 218472600,
+        "volume-ma-50": 142817300,
+        "value": "1,087.94B",
+        "value-ma-50": "672.18B",
+        "1-day-volume-change": "61.47%",
+        "net-foreign-buy-sell": "92.18B"
+    },
+    {
+        "code": "ASII",
+        "price": 5020,
+        "bb-upper-20": 4910,
+        "price-ma-200": 4390,
+        "price-ma-20": 4710,
+        "price-ma-50": 4580,
+        "volume": 78291400,
+        "volume-ma-50": 47281600,
+        "value": "393.02B",
+        "value-ma-50": "223.84B",
+        "1-day-volume-change": "72.31%",
+        "net-foreign-buy-sell": "47.92B"
+    },
+    {
+        "code": "TLKM",
+        "price": 3050,
+        "bb-upper-20": 2980,
+        "price-ma-200": 2680,
+        "price-ma-20": 2865,
+        "price-ma-50": 2790,
+        "volume": 142817400,
+        "volume-ma-50": 87291600,
+        "value": "435.59B",
+        "value-ma-50": "247.18B",
+        "1-day-volume-change": "58.94%",
+        "net-foreign-buy-sell": "61.84B"
+    }
+]

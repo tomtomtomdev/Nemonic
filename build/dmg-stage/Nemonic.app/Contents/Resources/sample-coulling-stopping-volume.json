@@ -1,0 +1,62 @@
+[
+    {
+        "code": "BUMI",
+        "low-price": 142,
+        "price-ma-20": 162,
+        "price": 156,
+        "open-price": 148,
+        "volume": 1847291600,
+        "volume-ma-20": 482719300,
+        "1-day-volume-change": "283.41%",
+        "foreign-flow-ma-20": "12.84B",
+        "frequency-spike": true
+    },
+    {
+        "code": "ANTM",
+        "low-price": 1485,
+        "price-ma-20": 1580,
+        "price": 1545,
+        "open-price": 1498,
+        "volume": 287194600,
+        "volume-ma-20": 92817400,
+        "1-day-volume-change": "209.36%",
+        "foreign-flow-ma-20": "8.47B",
+        "frequency-spike": true
+    },
+    {
+        "code": "MDKA",
+        "low-price": 2240,
+        "price-ma-20": 2420,
+        "price": 2370,
+        "open-price": 2290,
+        "volume": 142817900,
+        "volume-ma-20": 51827400,
+        "1-day-volume-change": "175.62%",
+        "foreign-flow-ma-20": "18.92B",
+        "frequency-spike": true
+    },
+    {
+        "code": "INCO",
+        "low-price": 3850,
+        "price-ma-20": 4180,
+        "price": 4020,
+        "open-price": 3920,
+        "volume": 84271900,
+        "volume-ma-20": 32918400,
+        "1-day-volume-change": "156.41%",
+        "foreign-flow-ma-20": "21.18B",
+        "frequency-spike": true
+    },
+    {
+        "code": "ADRO",
+        "low-price": 2280,
+        "price-ma-20": 2475,
+        "price": 2410,
+        "open-price": 2310,
+        "volume": 184271600,
+        "volume-ma-20": 72918400,
+        "1-day-volume-change": "152.74%",
+        "foreign-flow-ma-20": "34.27B",
+        "frequency-spike": true
+    }
+]

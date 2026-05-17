@@ -1,0 +1,116 @@
+{
+  "" : {
+    "const-values" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-primary.swiftconstvalues",
+    "dependencies" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-primary.d",
+    "diagnostics" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-primary.dia",
+    "emit-module-dependencies" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-primary-emit-module.dia",
+    "pch" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Nemonic-primary.swiftdeps"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Domain/ConfluenceContext.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ConfluenceContext.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ConfluenceContext.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ConfluenceContext.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Domain/JSONValue.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/JSONValue.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/JSONValue.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/JSONValue.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Domain/PositionSizer.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/PositionSizer.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/PositionSizer.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/PositionSizer.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Domain/ScreenerSchema.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerSchema.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerSchema.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerSchema.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Domain/ScreenerSignal.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerSignal.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerSignal.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerSignal.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/NemonicApp.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/NemonicApp.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/NemonicApp.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/NemonicApp.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/CaptureCoordinator.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/CaptureCoordinator.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/CaptureCoordinator.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/CaptureCoordinator.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/FileSink.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/FileSink.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/FileSink.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/FileSink.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/JSONWriter.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/JSONWriter.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/JSONWriter.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/JSONWriter.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/NumericValueParser.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/NumericValueParser.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/NumericValueParser.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/NumericValueParser.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/OCRService.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/OCRService.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/OCRService.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/OCRService.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/RowMapper.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/RowMapper.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/RowMapper.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/RowMapper.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/ScreenerClassifier.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerClassifier.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerClassifier.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerClassifier.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/ScreenerJSONLoader.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerJSONLoader.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerJSONLoader.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerJSONLoader.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/ScreenerRegistry.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerRegistry.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerRegistry.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenerRegistry.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/ScreenshotWatcher.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenshotWatcher.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenshotWatcher.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/ScreenshotWatcher.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/SignalEngine.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/SignalEngine.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/SignalEngine.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/SignalEngine.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/VisionOCRService.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/VisionOCRService.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/VisionOCRService.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/VisionOCRService.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/Services/Watchlist.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Watchlist.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Watchlist.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/Watchlist.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/Nemonic/UI/MenuBarContentView.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/MenuBarContentView.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/MenuBarContentView.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/MenuBarContentView.o"
+  },
+  "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/tomtomtom/Desktop/Nemonic/build/DerivedData/Build/Intermediates.noindex/Nemonic.build/Release/Nemonic.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}

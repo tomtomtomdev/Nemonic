@@ -1,0 +1,67 @@
+[
+    {
+        "code": "PGAS",
+        "low-price": 1340,
+        "price": 1395,
+        "open-price": 1355,
+        "bb-lower-20": 1380,
+        "volume": 184729100,
+        "volume-ma-50": 62817400,
+        "bandar-value": "8.94B",
+        "bandar-accum-dist": 1247,
+        "net-foreign-buy-streak": 3,
+        "rsi-14": "32.41%"
+    },
+    {
+        "code": "PTBA",
+        "low-price": 2780,
+        "price": 2890,
+        "open-price": 2815,
+        "bb-lower-20": 2860,
+        "volume": 78291400,
+        "volume-ma-50": 28471900,
+        "bandar-value": "12.47B",
+        "bandar-accum-dist": 892,
+        "net-foreign-buy-streak": 4,
+        "rsi-14": "28.94%"
+    },
+    {
+        "code": "INDY",
+        "low-price": 1620,
+        "price": 1715,
+        "open-price": 1645,
+        "bb-lower-20": 1685,
+        "volume": 142817600,
+        "volume-ma-50": 51827400,
+        "bandar-value": "9.18B",
+        "bandar-accum-dist": 1583,
+        "net-foreign-buy-streak": 2,
+        "rsi-14": "35.62%"
+    },
+    {
+        "code": "ELSA",
+        "low-price": 420,
+        "price": 448,
+        "open-price": 428,
+        "bb-lower-20": 442,
+        "volume": 287194600,
+        "volume-ma-50": 92817400,
+        "bandar-value": "4.72B",
+        "bandar-accum-dist": 615,
+        "net-foreign-buy-streak": 3,
+        "rsi-14": "37.18%"
+    },
+    {
+        "code": "DEWA",
+        "low-price": 86,
+        "price": 94,
+        "open-price": 88,
+        "bb-lower-20": 92,
+        "volume": 1847291600,
+        "volume-ma-50": 482719300,
+        "bandar-value": "2.18B",
+        "bandar-accum-dist": 348,
+        "net-foreign-buy-streak": 2,
+        "rsi-14": "31.84%"
+    }
+]
